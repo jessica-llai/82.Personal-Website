@@ -8,7 +8,7 @@ import os
 # database & html stuffs
 app = Flask(__name__)
 Bootstrap(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
