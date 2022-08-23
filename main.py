@@ -39,10 +39,6 @@ def load_user(user_id):
 def homepage():
     return render_template('index.html')
 
-@app.route('/index.html')
-def homepage2():
-    return render_template('index.html')
-
 @app.route('/work')
 def elements():
     return render_template('work.html')
@@ -60,7 +56,6 @@ def register():
             email = form.email.data,
             password = form.password.data
         )
-
 
         db.session.add(new_user)
         db.session.commit()
